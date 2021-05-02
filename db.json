@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "name": "First User",
+      "email": "test@gmail.com",
+      "phone": "9111111111",
+      "address": "Thane ",
+      "id": 1
+    },
+    {
+      "name": "User2",
+      "email": "testname@you.in",
+      "phone": "9222222222",
+      "address": "Ghansoli",
+      "id": 2
+    },
+    {
+      "name": "New User on Top",
+      "email": "anything123@gmail.com",
+      "phone": "988888888",
+      "address": "Test address",
+      "id": 3
+    }
+  ]
+}

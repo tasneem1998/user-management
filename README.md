@@ -68,3 +68,64 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Steps for the User Management Project
+1. Create and Run app
+> npx create-react-app user-management
+> cd user-management
+> npm start
+2. Install and Add Bootstrap 
+> npm i bootsrtap
+import "bootstrap/dist/css/bootstrap.min.css"  (index.js)
+3. Make folders and files
+Create components as folder with two subfolder named as pages and layout
+Create files -> Homes.js, About.js, Contact.js (pages)
+Create file -> NavBar.js (layout)
+4. Create React Components, import and use into App.js
+5. Routing 
+    a. installation 
+    > npm i react-router-dom
+    b. import and use into App.js
+    import { BrowserRouter as Router, Switch, Route } from "react-router-dom" (App.js)
+    import {NavLink} from "react-router-dom"  (NavBar.js)
+6. 404 page
+    CSS to override header
+    .not-found{position: fixed;width: 100vw;height: 100vh;top:0;left: 0; background: #f5deb3;}
+    <Route component={PageNotFound} /> (App.js)
+7. Create Fake API
+    a. installation
+    > npm i json-server --save
+    b. create db.json file (before starting json server)
+    outside src and add users json data (https://jsonplaceholder.typicode.com/users)
+    c. Run API 
+    > json-server --watch db.json
+8. To run both on single command
+    a. Install concurrently
+    > npm i concurrently --save
+    b. Add into package.json (except start bcz already there)
+        "start": "react-scripts start",  
+        "json-server": "json-server --watch db.json --port 3001",
+        "start:dev": "concurrently \"npm start\" \"npm run json-server\"",
+9. Run App with API
+> npm run start:dev
+10. HTTP request to API using axios
+> npm i axios
+11. Store data using Hooks & axios
+    a. useState (to set users)
+    c. axios (to get data from API)
+    b. useEffect (API call here like componentDidMount)
+12. Show data
+    a. Create table in Home.js
+    b. loop users using map() function
+    c. last column for Actions 
+    > npm i --save @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome
+    use icons for actions (i.e. View, Edit, Delete)
+13. Make users folder contaning AddUser.js, UpdateUser.js, ShowUser.js 
+    a. Add User
+    -> Add user using POST method of axios
+    -> Redirect to home page using "useHistory().push()"
+    b. Update User ( using dynamic routing - useParams() in UpdateUser.js to get id )
+    GET API to prefill data (into useEffect() loadUsers())
+    PUT API to update user (on button click of update user)
+14. 
+    
