@@ -22,7 +22,7 @@ export const NavBar = () => {
                         </li>
                     </ul>
                 </div>
-                <Link to="/users/add" className="ml-md-5 btn btn-outline-light">Add User</Link>
+                <Link to="/user/add" className="ml-md-5 btn btn-outline-light">Add User</Link>
             </div>
         </nav>
     )

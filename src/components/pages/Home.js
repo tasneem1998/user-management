@@ -44,8 +44,8 @@ export const Home = () => {
                   <td>{user.name}</td>
                   <td>{user.email}</td>
                   <td>{user.address}</td>
-                  <td><Link to={`users/view/${user.id}`}><FontAwesomeIcon icon={faEye} /></Link></td>
-                  <td><Link to={`users/edit/${user.id}`}><FontAwesomeIcon icon={faEdit} className="text-warning" /></Link></td>
+                  <td><Link to={`user/${user.id}`}><FontAwesomeIcon icon={faEye} /></Link></td>
+                  <td><Link to={`user/edit/${user.id}`}><FontAwesomeIcon icon={faEdit} className="text-warning" /></Link></td>
                   <td><FontAwesomeIcon icon={faTrash} style={{ color: "red", cursor: "pointer" }} onClick={() => { deleteUser(user.id) }} /></td>
                 </tr>
               ))

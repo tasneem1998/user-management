@@ -120,12 +120,20 @@ Create file -> NavBar.js (layout)
     c. last column for Actions 
     > npm i --save @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome
     use icons for actions (i.e. View, Edit, Delete)
-13. Make users folder contaning AddUser.js, UpdateUser.js, ShowUser.js 
-    a. Add User
+13. Make users folder contaning CreateUser.js, UpdateUser.js, ShowUser.js 
+14. CREATE User
     -> Add user using POST method of axios
     -> Redirect to home page using "useHistory().push()"
-    b. Update User ( using dynamic routing - useParams() in UpdateUser.js to get id )
-    GET API to prefill data (into useEffect() loadUsers())
-    PUT API to update user (on button click of update user)
-14. 
+15. UPDATE User ( using dynamic routing - useParams() in UpdateUser.js to get id )
+    when click on Edit icon redirect to /users/edit/id
+    GET method API with axios to prefill data (into useEffect() loadUsers())
+    PUT method API with axios to update user (on button click of update user)
+14. DELETE User
+    click on Delete icon it will call DELETE API metho by passing id of user
+    and reload the users data by get method
+15. READ (i.e. SHOW) User ( using dynamic routing - useParams() in ShowUser.js to get id )
+    click on View icon it will redirect to /users/id which call API with GET method by passing id of user
+
+Thanks 
+    
     

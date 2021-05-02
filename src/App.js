@@ -18,9 +18,9 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
-          <Route path="/users/add" component={CreateUser}/>
-          <Route path="/users/edit/:id" component={UpdateUser}/>
-          <Route path="/users/view/:id" component={ShowUser}/>
+          <Route path="/user/add" component={CreateUser}/>
+          <Route path="/user/edit/:id" component={UpdateUser}/>
+          <Route path="/user/:id" component={ShowUser}/>
           <Route component={PageNotFound} />
         </Switch>
         </div>
