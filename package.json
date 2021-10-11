@@ -1,6 +1,5 @@
 {
   "name": "user-management",
-  "homepage": "http://tasneem1998.github.io/user-management",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
